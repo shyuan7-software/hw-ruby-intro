@@ -80,22 +80,11 @@ def binary_multiple_of_4? s
   if s=='0'
     return true
   end
-  
-  if s.length<3 
+  if s =~ /^([0~1]*)00$/
+    return true
+  else
     return false
   end
-  
-  if s[s.length-3,s.length] != '100'
-    return false
-  end
-  
-  for i in 0...(s.length)
-    if s[i]!='0' && s[i]!='1'
-      return false
-    end
-  end
-  
-  return true
   # YOUR CODE COMPLETE
 end
 
