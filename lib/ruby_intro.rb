@@ -96,7 +96,7 @@ class BookInStock
     if i=="" or p<=0
       raise ArgumentError
     end
-    @isbn=i;#定义成员变量  
+    @isbn=i
     @price=p  
   end  
   
